@@ -1,6 +1,6 @@
 // api/chat.js
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import portfolioData from './portfolio-data.js';
+import { portfolioData } from './portfolio-data.js';
 
 // Initialize API with the key from the environment (SERVER SIDE ONLY)
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
