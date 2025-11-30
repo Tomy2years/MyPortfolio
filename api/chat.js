@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
     // Constructs the System Prompt using your Portfolio Data
     // We combine your structured data with the user's question
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-001" });
 
     const systemContext = `
       You are an AI assistant for Tom Perel's portfolio.
