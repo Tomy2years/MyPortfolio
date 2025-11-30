@@ -1,34 +1,34 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, ScrollText } from "lucide-react";
 
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "Evaluating Adversarial Vulnerabilities in Modern Large Language Models",
+    description: "A solo, award winning research project on jailbreaking the two leading LLMs. Conducted data cleaning using Pandas, and visualized results with Matplotlib which was used in my paper.",
+    image: "/projects/Project1.JPG",
+    tags: ["Python", "Pandas", "Matplotlib"],
+    demoUrl: "https://arxiv.org/abs/2511.17666",
+    githubUrl: "https://github.com/Tomy2years/llm-jail-break",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Clash Royale Computer Vision Project",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+      "Using MSS for lightning fast screen capture and OpenCV for template matching. Features include detecting game state (menu or in-game), automatically starting a game, and counting elixir.",
+    image: "/projects/project2.jpeg",
+    tags: ["OpenCV", "MSS", "Android Debug Bridge"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Tomy2years/ClashRoyaleBot",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "FreeCodeCamp",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "Earned 2 certifications from FreeCodeCamp. One in Scientific Computing with Python and the other for Responsive Web Design using HTML and vanilla CSS",
+    image: "/projects/project3.jpg",
+    tags: ["Python", "Data Science", "Web Development"],
+    demoUrl: "https://www.freecodecamp.org/TomPerel",
+    githubUrl: "https://github.com/Tomy2years/FreeCodeCamp",
   },
 ];
 
@@ -80,7 +80,7 @@ export const ProjectsSection = () => {
                       target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
-                      <ExternalLink size={20} />
+                      <ScrollText size={20} />
                     </a>
                     <a
                       href={project.githubUrl}
@@ -100,7 +100,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/tomy2years"
           >
             Check My Github <ArrowRight size={16} />
           </a>
