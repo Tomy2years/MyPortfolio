@@ -4,32 +4,12 @@ import {
   Mail,
   MapPin,
   Phone,
-  Send,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
 
 export const ContactSection = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    setIsSubmitting(true);
-
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      setIsSubmitting(false);
-    }, 1500);
-  };
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-3xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Get In <span className="text-primary"> Touch</span>
         </h2>
@@ -39,139 +19,78 @@ export const ContactSection = () => {
           I'm always open to discussing new opportunities.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">
-              {" "}
-              Contact Information
-            </h3>
+        <div className="flex flex-col items-center space-y-8">
+          <h3 className="text-2xl font-semibold mb-2 text-center">
+            Contact Information
+          </h3>
 
-            <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
-                  <h4 className="font-medium"> Email</h4>
-                  <a
-                    href="mailto:pereltom2@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    pereltom2@gmail.com
-                  </a>
-                </div>
+          <div className="space-y-6 w-full max-w-md">
+            
+            {/* Email - Changed to flex-col and text-center */}
+            <div className="flex flex-col items-center p-6 rounded-lg bg-card/50 border border-border/50 hover:bg-card/80 transition-colors">
+              <div className="p-3 rounded-full bg-primary/10 mb-4">
+                <Mail className="h-8 w-8 text-primary" />
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
-                  <h4 className="font-medium"> Phone</h4>
-                  <a
-                    href="tel:+14127583919"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    +1 (412) 758-3919
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
-                  <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Irvine, California, USA
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
-              <div className="flex space-x-4 justify-center">
-                <a href="https://www.linkedin.com/in/tomperel/" target="_blank">
-                  <Linkedin />
-                </a>
-                <a href="https://github.com/tomy2years" target="_blank">
-                  <Github />
+              <div className="text-center">
+                <h4 className="font-medium text-sm text-muted-foreground mb-1">Email</h4>
+                <a
+                  href="mailto:pereltom2@gmail.com"
+                  className="text-lg font-medium hover:text-primary transition-colors block"
+                >
+                  pereltom2@gmail.com
                 </a>
               </div>
             </div>
+
+            {/* Phone - Changed to flex-col and text-center */}
+            <div className="flex flex-col items-center p-6 rounded-lg bg-card/50 border border-border/50 hover:bg-card/80 transition-colors">
+              <div className="p-3 rounded-full bg-primary/10 mb-4">
+                <Phone className="h-8 w-8 text-primary" />
+              </div>
+              <div className="text-center">
+                <h4 className="font-medium text-sm text-muted-foreground mb-1">Phone</h4>
+                <a
+                  href="tel:+14127583919"
+                  className="text-lg font-medium hover:text-primary transition-colors block"
+                >
+                  +1 (412) 758-3919
+                </a>
+              </div>
+            </div>
+
+            {/* Location - Changed to flex-col and text-center */}
+            <div className="flex flex-col items-center p-6 rounded-lg bg-card/50 border border-border/50 hover:bg-card/80 transition-colors">
+              <div className="p-3 rounded-full bg-primary/10 mb-4">
+                <MapPin className="h-8 w-8 text-primary" />
+              </div>
+              <div className="text-center">
+                <h4 className="font-medium text-sm text-muted-foreground mb-1">Location</h4>
+                <span className="text-lg font-medium block">
+                  Irvine, California, USA
+                </span>
+              </div>
+            </div>
+            
           </div>
 
-          <div
-            className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
-          >
-            <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
-
-            <form className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Your name..."
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="YourEmail@gmail.com"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
-                  placeholder="Hello, I'd like to talk about..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
-                )}
+          <div className="pt-8 text-center">
+            <h4 className="font-medium mb-4 text-muted-foreground">Connect With Me</h4>
+            <div className="flex space-x-6 justify-center">
+              <a 
+                href="https://www.linkedin.com/in/tomperel/" 
+                target="_blank"
+                className="hover:text-primary transition-transform hover:scale-110"
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
-                <Send size={16} />
-              </button>
-            </form>
+                <Linkedin size={32} />
+              </a>
+              <a 
+                href="https://github.com/tomy2years" 
+                target="_blank"
+                className="hover:text-primary transition-transform hover:scale-110"
+              >
+                <Github size={32} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
