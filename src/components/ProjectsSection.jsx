@@ -4,7 +4,7 @@ const projects = [
   {
     id: 1,
     title: "Evaluating Adversarial Vulnerabilities in Modern Large Language Models",
-    description: "A solo, award winning research project on jailbreaking the two leading LLMs. Conducted data cleaning using Pandas, and visualized results with Matplotlib which was used in my paper.",
+    description: "A solo research project with a published and cited paper that won the 2025 IVC/Saddleback Research Symposium out of 200+ participants.",
     image: "/projects/Project1.JPG",
     tags: ["Python", "Pandas", "Matplotlib"],
     demoUrl: "https://arxiv.org/abs/2511.17666",
@@ -12,23 +12,23 @@ const projects = [
   },
   {
     id: 2,
-    title: "Clash Royale Computer Vision Project",
+    title: "Portrait",
     description:
-      "Using MSS for lightning fast screen capture and OpenCV for template matching. Features include detecting game state (menu or in-game), automatically starting a game, and counting elixir.",
+      "AI-Powered version of Canvas with RAG chatbot that won 1st place at the AI track for UCI HackTheCoast 2026.",
     image: "/projects/project2.jpeg",
-    tags: ["OpenCV", "MSS", "Android Debug Bridge"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/Tomy2years/ClashRoyaleBot",
+    tags: ["Langchain", "React", "SQLite", "FastAPI"],
+    demoUrl: "https://devpost.com/software/portrait-3fzu1l",
+    githubUrl: "https://github.com/Tomy2years/HackTheCoast",
   },
   {
     id: 3,
-    title: "FreeCodeCamp",
+    title: "SideQuest",
     description:
-      "Earned 2 certifications from FreeCodeCamp. One in Scientific Computing with Python and the other for Responsive Web Design using HTML and vanilla CSS",
+      "A gamified social media that gets people moving around their community. Won 1st place overall and the Community track at LaserHacks 2026.",
     image: "/projects/project3.jpg",
-    tags: ["Python", "Data Science", "Web Development"],
-    demoUrl: "https://www.freecodecamp.org/TomPerel",
-    githubUrl: "https://github.com/Tomy2years/FreeCodeCamp",
+    tags: ["FastAPI", "Langchain", "SQLAlchemy", "React"],
+    demoUrl: "https://devpost.com/software/laserhacks",
+    githubUrl: "https://github.com/Tomy2years/Laserhacks",
   },
 ];
 
